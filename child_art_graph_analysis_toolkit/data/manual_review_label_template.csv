@@ -1,0 +1,2 @@
+image_path,age_group,drawing_prompt,teacher_observation,counselor_notes,stress_level_professional_label,stress_score_0_100_professional_label,review_required,do_not_use_for_diagnosis
+sample_images/sample_child_art_01.png,8-10,Free drawing,,,,,,Yes

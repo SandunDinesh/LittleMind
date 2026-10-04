@@ -1,0 +1,111 @@
+{
+  "warning": "Screening/research model only. Not a diagnosis.",
+  "target": "stress_level",
+  "features_used": [
+    "age_group",
+    "drawing_prompt",
+    "scan_quality_score",
+    "mean_hue_deg",
+    "mean_saturation",
+    "mean_value_brightness",
+    "warm_color_ratio",
+    "cool_color_ratio",
+    "dark_color_ratio",
+    "bright_color_ratio",
+    "red_ratio",
+    "blue_ratio",
+    "green_ratio",
+    "yellow_ratio",
+    "black_gray_ratio",
+    "dominant_color_count",
+    "color_variety_score",
+    "edge_density",
+    "line_count",
+    "avg_line_length_px",
+    "line_length_std_px",
+    "stroke_thickness_avg_px",
+    "stroke_thickness_std_px",
+    "broken_line_ratio",
+    "horizontal_line_ratio",
+    "vertical_line_ratio",
+    "diagonal_line_ratio",
+    "curved_line_ratio",
+    "orientation_entropy",
+    "closed_contour_ratio",
+    "shape_count",
+    "object_count",
+    "drawing_area_ratio",
+    "whitespace_ratio",
+    "center_occupancy_ratio",
+    "left_right_symmetry_score",
+    "top_bottom_balance_score",
+    "texture_entropy",
+    "contrast_score",
+    "scribble_density",
+    "erasure_marks_ratio",
+    "pressure_proxy_darkness",
+    "content_aggression_depicted",
+    "content_crying_figure",
+    "content_isolated_figure",
+    "content_weapon_depicted",
+    "content_injury_depicted",
+    "content_adult_child_conflict"
+  ],
+  "accuracy": 0.5848068107400131,
+  "macro_f1": 0.5182274136392463,
+  "classification_report": {
+    "Low": {
+      "precision": 0.6260744985673352,
+      "recall": 0.4267578125,
+      "f1-score": 0.5075493612078978,
+      "support": 1024.0
+    },
+    "Moderate": {
+      "precision": 0.5636957536164255,
+      "recall": 0.7984137475214805,
+      "f1-score": 0.6608315098468271,
+      "support": 1513.0
+    },
+    "High": {
+      "precision": 0.6619718309859155,
+      "recall": 0.2727272727272727,
+      "f1-score": 0.3863013698630137,
+      "support": 517.0
+    },
+    "accuracy": 0.5848068107400131,
+    "macro avg": {
+      "precision": 0.6172473610565588,
+      "recall": 0.4992996109162511,
+      "f1-score": 0.5182274136392463,
+      "support": 3054.0
+    },
+    "weighted avg": {
+      "precision": 0.6012480020872041,
+      "recall": 0.5848068107400131,
+      "f1-score": 0.5629621573327815,
+      "support": 3054.0
+    }
+  },
+  "confusion_matrix_labels": [
+    "Low",
+    "Moderate",
+    "High"
+  ],
+  "confusion_matrix": [
+    [
+      437,
+      579,
+      8
+    ],
+    [
+      241,
+      1208,
+      64
+    ],
+    [
+      20,
+      356,
+      141
+    ]
+  ]
+}

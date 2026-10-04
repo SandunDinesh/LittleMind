@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Child Art Analysis Graph Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 32px; background: #fafafa; }
+h1, h2, h3 { color: #222; }
+.warning { padding: 12px; border: 1px solid #999; background: #fff; margin-bottom: 18px; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.metric { background: #fff; border: 1px solid #ddd; padding: 14px; border-radius: 8px; }
+.card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin: 16px 0; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+td, th { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background: #f2f2f2; }
+</style>
+</head>
+<body>
+<h1>Child Art Analysis Graph Report</h1>
+<div class="warning">
+<b>Safety note:</b> Screening/research support only. Do not diagnose abuse, rape, trauma, or mental illness from art. If <code>review_required=True</code>, send for trained counselor/safeguarding review.
+</div>
+<h2>Summary</h2>
+<div class="metrics">
+<div class="metric"><b>Image</b><br>a.jpg</div>
+<div class="metric"><b>Predicted stress level</b><br>Moderate</div>
+<div class="metric"><b>Stress score</b><br>RETRAIN_MODEL_REQUIRED</div>
+<div class="metric"><b>Review required</b><br>False</div>
+</div>
+<h2>Graphs</h2>
+<div class="card"><h3>Color Ratios</h3><img src="color_ratios.png"></div>
+<div class="card"><h3>Line Features</h3><img src="line_features.png"></div>
+<div class="card"><h3>Composition Features</h3><img src="composition_features.png"></div>
+<div class="card"><h3>Texture Features</h3><img src="texture_features.png"></div>
+<div class="card"><h3>Stress Probabilities</h3><img src="stress_probabilities.png"></div>
+<div class="card"><h3>Feature Radar</h3><img src="feature_radar.png"></div>
+<h2>Detected Parameter Values</h2>
+<table><tr><th>Parameter</th><th>Value</th></tr><tr><td>Image Id</td><td>a.jpg</td></tr>
+<tr><td>Age Group</td><td>8-10</td></tr>
+<tr><td>Drawing Prompt</td><td>Free drawing</td></tr>
+<tr><td>Scan Quality Score</td><td>0.92691</td></tr>
+<tr><td>Mean Hue Deg</td><td>209.31413</td></tr>
+<tr><td>Mean Saturation</td><td>0.08468</td></tr>
+<tr><td>Mean Value Brightness</td><td>0.89347</td></tr>
+<tr><td>Warm Color Ratio</td><td>0.0</td></tr>
+<tr><td>Cool Color Ratio</td><td>0.16393</td></tr>
+<tr><td>Dark Color Ratio</td><td>0.01589</td></tr>
+<tr><td>Bright Color Ratio</td><td>0.82146</td></tr>
+<tr><td>Red Ratio</td><td>0.0</td></tr>
+<tr><td>Blue Ratio</td><td>0.13952</td></tr>
+<tr><td>Green Ratio</td><td>0.0</td></tr>
+<tr><td>Yellow Ratio</td><td>0.0</td></tr>
+<tr><td>Black Gray Ratio</td><td>0.00786</td></tr>
+<tr><td>Dominant Color Count</td><td>2.0</td></tr>
+<tr><td>Color Variety Score</td><td>0.02863</td></tr>
+<tr><td>Edge Density</td><td>0.07566</td></tr>
+<tr><td>Line Count</td><td>490.0</td></tr>
+<tr><td>Avg Line Length ((Px))</td><td>56.08134</td></tr>
+<tr><td>Line Length Std ((Px))</td><td>44.23609</td></tr>
+<tr><td>Stroke Thickness Avg ((Px))</td><td>16.72662</td></tr>
+<tr><td>Stroke Thickness Std ((Px))</td><td>14.38611</td></tr>
+<tr><td>Broken Line Ratio</td><td>0.35102</td></tr>
+<tr><td>Horizontal Line Ratio</td><td>0.23061</td></tr>
+<tr><td>Vertical Line Ratio</td><td>0.14082</td></tr>
+<tr><td>Diagonal Line Ratio</td><td>0.62857</td></tr>
+<tr><td>Curved Line Ratio</td><td>0.0</td></tr>
+<tr><td>Orientation Entropy</td><td>0.69228</td></tr>
+<tr><td>Closed Contour Ratio</td><td>0.0</td></tr>
+<tr><td>Shape Count</td><td>3.0</td></tr>
+<tr><td>Object Count</td><td>3.0</td></tr>
+<tr><td>Drawing Area Ratio</td><td>0.24466</td></tr>
+<tr><td>Whitespace Ratio</td><td>0.75534</td></tr>
+<tr><td>Center Occupancy Ratio</td><td>0.69742</td></tr>
+<tr><td>Left Right Symmetry Score</td><td>0.83146</td></tr>
+<tr><td>Top Bottom Balance Score</td><td>0.96818</td></tr>
+<tr><td>Texture Entropy</td><td>0.44073</td></tr>
+<tr><td>Contrast Score</td><td>0.25206</td></tr>
+<tr><td>Scribble Density</td><td>0.01851</td></tr>
+<tr><td>Erasure Marks Ratio</td><td>0.0</td></tr>
+<tr><td>Pressure Proxy Darkness</td><td>0.10653</td></tr>
+<tr><td>Predicted Stress Level</td><td>Moderate</td></tr>
+<tr><td>Prob High</td><td>0.17452</td></tr>
+<tr><td>Prob Low</td><td>0.3986</td></tr>
+<tr><td>Prob Moderate</td><td>0.42688</td></tr>
+<tr><td>Predicted Stress Score 0 100</td><td>RETRAIN_MODEL_REQUIRED</td></tr>
+<tr><td>Regressor Warning</td><td>Stress score regressor could not load. Run: python src/train_model.py --data data/child_ar...</td></tr>
+<tr><td>Review Required</td><td>0.0</td></tr></table>
+</body>
+</html>
