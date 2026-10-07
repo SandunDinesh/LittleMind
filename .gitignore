@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Model cache / downloaded weights (rebuilt by training)
+Backend/models/cache/
+Backend/models/weights/
+# old unused model from the synthetic-data version (91 MB)
+Backend/models/stress_level_classifier.joblib
+
+# Node / Next.js
+Frontend/node_modules/
+Frontend/.next/
+Frontend/out/
+Frontend/.env
+Frontend/.env.local
+*.tsbuildinfo
+
+# backups and OS files
+*.old
+.DS_Store
+Thumbs.db

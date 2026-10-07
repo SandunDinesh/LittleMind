@@ -1,0 +1,35 @@
+# Render Blueprint for LittleMind
+# Render dashboard -> New -> Blueprint -> pick this GitHub repo -> Apply
+services:
+  # ---------- FastAPI backend (ML model) ----------
+  - type: web
+    name: littlemind-api
+    runtime: python
+    rootDir: Backend
+    plan: standard            # 2 GB RAM: PyTorch + ResNet50 need about 1 GB
+    region: singapore
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: OMP_NUM_THREADS
+        value: "2"
+      - key: FRONTEND_ORIGINS
+        value: https://littlemind-web.onrender.com
+
+  # ---------- Next.js frontend ----------
+  - type: web
+    name: littlemind-web
+    runtime: node
+    rootDir: Frontend
+    plan: free
+    region: singapore
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: BACKEND_URL           # address of the backend service above
+        value: https://littlemind-api.onrender.com

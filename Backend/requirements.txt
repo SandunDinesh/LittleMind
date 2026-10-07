@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn==1.9.1
+joblib
+opencv-python
+pillow
+matplotlib
+torch
+torchvision
+timm
+fastapi
+uvicorn[standard]
+python-multipart
